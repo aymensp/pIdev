@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="760" prefWidth="1360" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.MainuserscreenController">
+    <children>
+      <AnchorPane fx:id="root1" prefHeight="760" prefWidth="1362.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="757.0" fitWidth="1377.0" layoutX="4.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/finalbg.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="200.0" prefHeight="760" prefWidth="241.0" visible="false" />
+      <JFXHamburger fx:id="hamburger" layoutX="1306.0" layoutY="20.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,14 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+-fx-background-image: url('file:C:/Users/aymen/Desktop/Tunfugees/src/Image/bg_camps.jpg');
+
+     -fx-background-size: 100% 100%;   
+}
+.button 
+{
+    -fx-background-color:#3CB371;
+    
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjouterRefugiesController">
+   <children>
+      <Text layoutX="212.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter Refugiés " textAlignment="CENTER" wrappingWidth="201.13671875">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <Label layoutX="176.0" layoutY="84.0" text="nom">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="168.0" layoutY="129.0" text="prenom">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="179.0" layoutY="182.0" text="age">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="176.0" layoutY="232.0" text="pays">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="nom" layoutX="257.0" layoutY="80.0" />
+      <TextField fx:id="prenom" layoutX="257.0" layoutY="127.0" />
+      <TextField fx:id="age" layoutX="257.0" layoutY="188.0" />
+      <TextField fx:id="pays" layoutX="257.0" layoutY="230.0" />
+      <Button fx:id="ajouter" layoutX="490.0" layoutY="350.0" mnemonicParsing="false" onAction="#insertRefugies" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #00ff91;" text="ajouter" />
+      <Button fx:id="retour" layoutX="395.0" layoutY="350.0" mnemonicParsing="false" onAction="#retourafficher" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #00ff91;" text="retour" />
+      <Line endX="190.0" layoutX="318.0" layoutY="50.0" startX="-200.0" />
+      <ImageView fx:id="re" fitHeight="20.0" fitWidth="20.0" layoutX="399.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/27-512.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="co" fitHeight="20.0" fitWidth="20.0" layoutX="490.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/apply_ok_check_yes_dialog-512.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgv" fitHeight="124.0" fitWidth="138.0" layoutX="421.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

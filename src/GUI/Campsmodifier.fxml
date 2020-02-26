@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.URL?>
+<AnchorPane id="AnchorPane" prefHeight="660" prefWidth="1260" style="-fx-border-color: NAVY;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CampsmodifierController">
+ <stylesheets>
+        <URL value="@Camps.css" />
+    </stylesheets>  
+    <children>
+      <TableView fx:id="idtable" layoutX="-2.0" layoutY="295.0" prefHeight="294.0" prefWidth="367.0" style="-fx-border-color: NAVY;">
+         <columns>
+            <TableColumn fx:id="clidcamp" prefWidth="75.0" text="Id Camp" />
+            <TableColumn fx:id="clnomcamp" prefWidth="75.0" text="Nom Camp" />
+            <TableColumn fx:id="clnbrmax" prefWidth="87.0" text="Nbr max" />
+            <TableColumn fx:id="clAdresse" minWidth="0.0" prefWidth="128.0" text="Adresse" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="14.0" layoutY="20.0" prefHeight="273.0" prefWidth="340.0">
+         <children>
+            <TextField fx:id="txtIdcamp" layoutX="117.0" layoutY="76.0" promptText="ID Camp" />
+            <TextField fx:id="txtnomCamp" layoutX="117.0" layoutY="118.0" promptText="Nom Camp" />
+            <TextField fx:id="txtnbrmax" layoutX="117.0" layoutY="155.0" promptText="Nombre Maximal Refugeé" />
+            <Text fx:id="nomc" layoutX="22.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NomCamp :" AnchorPane.leftAnchor="15.0" />
+            <Text fx:id="nbrmax" layoutX="9.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Max :" AnchorPane.leftAnchor="15.0" />
+            <Text fx:id="adresse" layoutX="22.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse :" AnchorPane.leftAnchor="15.0" />
+            <TextField fx:id="txtadresse" layoutX="117.0" layoutY="198.0" promptText="Adresse" />
+            <Text layoutX="15.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier Camps :">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Separator layoutY="51.0" prefHeight="4.0" prefWidth="344.0" style="-fx-background-color: NAVY;" />
+            <Text fx:id="idc" layoutX="27.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id  Camp :" AnchorPane.leftAnchor="15.0" />
+            <Button fx:id="btn" layoutX="62.0" layoutY="238.0" mnemonicParsing="false" onAction="#validerModif" prefHeight="0.0" prefWidth="86.0" style="-fx-background-color: #00ff91;" text="Modifier" AnchorPane.topAnchor="240.0" />
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="59.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Pidev1/src/Image/edit-not-validated-icon.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="supprimer" layoutX="167.0" layoutY="237.0" mnemonicParsing="false" onAction="#validersupp" prefHeight="0.0" prefWidth="103.0" style="-fx-background-color: #00ff91;" text="Supprimer" AnchorPane.topAnchor="240.0" />
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="167.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Pidev1/src/Image/empty_recycle_bin_by_brightknight.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="vider" layoutY="237.0" mnemonicParsing="false" onAction="#vider" prefHeight="0.0" style="-fx-background-color: #00ff91;" text="Vider" AnchorPane.topAnchor="240.0" />
+            <Button fx:id="retour" layoutX="253.0" layoutY="15.0" mnemonicParsing="false" onAction="#directAccueil" prefHeight="20.0" prefWidth="79.0" style="-fx-background-color: #00ff91;" text="Retour" />
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="308.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Pidev1/src/Image/arrow-back-512.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnAjouter" layoutX="282.0" layoutY="240.0" mnemonicParsing="false" onAction="#insertdata" style="-fx-background-color: #00ff91;" text="Ajouter" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" onDragDetected="#retour" prefHeight="750.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Afficher_AnnonceController">
+   <children>
+      <TextField fx:id="txAdresse" layoutX="27.0" layoutY="426.0" promptText="Adresse" />
+      <TextArea fx:id="txtDesc" layoutX="380.0" layoutY="400.0" prefHeight="167.0" prefWidth="180.0" promptText="Description" />
+      <Button fx:id="btnValider" layoutX="610.0" layoutY="426.0" mnemonicParsing="false" onMouseClicked="#modifierEvent" style="-fx-background-color: #00ff91;" text="Valider" />
+      <TextField fx:id="cmboType" layoutX="202.0" layoutY="426.0" promptText="Type" />
+      <TableView fx:id="tableAnnonce" layoutX="27.0" layoutY="23.0" prefHeight="341.0" prefWidth="910.0">
+        <columns>
+          <TableColumn fx:id="coloneID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="coloneAdresse" prefWidth="131.0" text="Adresse" />
+            <TableColumn fx:id="coloneType" prefWidth="78.0" text="Type" />
+            <TableColumn fx:id="colonedate" prefWidth="141.0" text="Date de Publication" />
+            <TableColumn fx:id="coloneDesc" prefWidth="246.0" text="Description" />
+            <TableColumn fx:id="coloneModifier" prefWidth="121.0" text="Modifier" />
+            <TableColumn fx:id="coloneSupprimer" prefWidth="117.0" text="Supprimer" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1260.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FrontEventController">
+   <children>
+      <BorderPane fx:id="container" layoutX="-2.0" layoutY="88.0" prefHeight="600.0" prefWidth="1200.0">
+         <center>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="500.0" prefWidth="1200.0" style="-fx-border-radius: 20; -fx-background-color: #F0F1F7;" styleClass="mainFxmlClass" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <content>
+                  <VBox prefHeight="66.0" prefWidth="1134.0" style="-fx-background-color: #F0F1F7;">
+                     <children>
+                        <Separator prefWidth="200.0">
+                           <opaqueInsets>
+                              <Insets top="10.0" />
+                           </opaqueInsets>
+                        </Separator>
+                        <Label prefHeight="66.0" prefWidth="359.0" text="Nos Evénements :">
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Century Gothic" size="24.0" />
+                           </font>
+                        </Label>
+                        <FlowPane fx:id="flow" alignment="CENTER_LEFT" hgap="20.0" prefWrapLength="1700.0" style="-fx-border-radius: 20; -fx-background-color: #F0F1F7;" vgap="10.0">
+                           <padding>
+                              <Insets left="10.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <Separator prefHeight="0.0" prefWidth="622.0">
+                                 <opaqueInsets>
+                                    <Insets bottom="10.0" />
+                                 </opaqueInsets>
+                              </Separator>
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </center>
+         <top>
+            <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="587.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <effect>
+                  <DropShadow color="#000000bb" height="40.07" radius="14.7675" spread="0.23" />
+               </effect>
+               <padding>
+                  <Insets right="70.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+      </BorderPane>
+      <Button fx:id="accueil" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#directAccueil" prefHeight="46.0" prefWidth="151.0" style="-fx-background-color: #00ff91;" text="Accueil" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

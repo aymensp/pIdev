@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="660.0" prefWidth="1260.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AllProduitController">
+     <stylesheets>
+        <URL value="@allproduits.css" />
+    </stylesheets>
+   <children>
+      <BorderPane fx:id="container" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <right>
+            <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="179.0" spacing="10.0" style="-fx-background-color: #F0F1F7;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="91.0" text="Trier" />
+                  <Separator prefWidth="200.0" />
+                  <Button fx:id="btnall" accessibleRole="TOGGLE_BUTTON" alignment="CENTER" mnemonicParsing="false" onAction="#gettall" prefHeight="26.0" prefWidth="166.0" text="All Produits" />
+                  <Button fx:id="btn_liked" accessibleRole="TOGGLE_BUTTON" alignment="CENTER" layoutX="17.0" layoutY="97.0" mnemonicParsing="false" onAction="#getliked" prefHeight="26.0" prefWidth="166.0" text="Plus aimé" />
+                  <Button fx:id="btn_viewd" accessibleRole="TOGGLE_BUTTON" alignment="CENTER" mnemonicParsing="false" onAction="#getviewed" prefHeight="26.0" prefWidth="166.0" text="Plus visualisé" />
+                  <Button fx:id="btn_prixdec" accessibleRole="TOGGLE_BUTTON" alignment="CENTER" layoutX="17.0" layoutY="97.0" mnemonicParsing="false" onAction="#prixdesc" prefHeight="26.0" prefWidth="166.0" text="Prix decroissant" />
+                  <Button fx:id="btn_prixcr" accessibleRole="TOGGLE_BUTTON" alignment="CENTER" layoutX="17.0" layoutY="169.0" mnemonicParsing="false" onAction="#prixasc" prefHeight="26.0" prefWidth="166.0" text="Prix croissant" />
+                  <Separator layoutX="10.0" layoutY="49.0" prefWidth="200.0" />
+                  <Label prefHeight="18.0" prefWidth="91.0" text="Gérer " />
+                  <Separator prefWidth="200.0" />
+                  <Button fx:id="btn_my" accessibleRole="TOGGLE_BUTTON" alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="166.0" text="Mes Produits" />
+                  <Button fx:id="btn_my1" accessibleRole="TOGGLE_BUTTON" alignment="CENTER" mnemonicParsing="false" onAction="#Stat" prefHeight="26.0" prefWidth="166.0" text="Statisque " />
+                  <Separator prefWidth="200.0" />
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <effect>
+                  <DropShadow color="#000000a7" height="99.64" radius="35.6175" spread="0.09" width="44.83" />
+               </effect>
+            </VBox>
+         </right>
+         <center>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="576.0" prefWidth="565.0" style="-fx-border-radius: 20; -fx-background-color: #F0F1F7;" styleClass="mainFxmlClass" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <content>
+                  <VBox prefHeight="66.0" prefWidth="1134.0" style="-fx-background-color: #F0F1F7;">
+                     <children>
+                        <Separator prefWidth="200.0">
+                           <opaqueInsets>
+                              <Insets top="10.0" />
+                           </opaqueInsets>
+                        </Separator>
+                        <Label prefHeight="39.0" prefWidth="219.0" text="Tout les Produits">
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="10.0" layoutY="110.0" prefWidth="200.0">
+                           <opaqueInsets>
+                              <Insets bottom="10.0" />
+                           </opaqueInsets>
+                        </Separator>
+                        <FlowPane fx:id="flow" alignment="CENTER_LEFT" hgap="20.0" prefWrapLength="1700.0" style="-fx-border-radius: 20; -fx-background-color: #F0F1F7;" vgap="10.0">
+                           <padding>
+                              <Insets left="10.0" top="20.0" />
+                           </padding>
+                        </FlowPane>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </center>
+         <top>
+            <HBox alignment="CENTER_RIGHT" prefHeight="67.0" prefWidth="980.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <effect>
+                  <DropShadow color="#000000bb" height="40.07" radius="14.7675" spread="0.23" />
+               </effect>
+               <children>
+                  <TextField fx:id="search" prefHeight="27.0" prefWidth="254.0" promptText="chrecher..." style="-fx-background-color: #FFFFFF; -fx-border-radius: 10;">
+                     <effect>
+                        <DropShadow color="#00000075" height="56.81" radius="19.66" width="23.83" />
+                     </effect>
+                  </TextField>
+                  <Button mnemonicParsing="false" onAction="#search" text="chercher">
+                     <effect>
+                        <DropShadow color="#0000008b" height="32.92" radius="20.130000000000003" spread="0.19" width="49.6" />
+                     </effect>
+                  </Button>
+                  <ImageView fx:id="panier" fitHeight="37.0" fitWidth="49.0" onMouseClicked="#AffichagePanier" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../res/panier2.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="62.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../res/clic.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets right="70.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

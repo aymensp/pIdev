@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.LigneCommandeController">
+    <stylesheets>
+        <URL value="@lignecommande.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="455.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../res/checked.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="fermer" layoutX="853.0" layoutY="548.0" mnemonicParsing="false" onAction="#Fermer" prefHeight="25.0" prefWidth="113.0" text="Fermer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label layoutX="43.0" layoutY="21.0" text="Détails de votre Commande" textFill="WHITE">
+         <font>
+            <Font name="BebasNeue" size="37.0" />
+         </font>
+      </Label>
+      <TableView fx:id="detail_commande" layoutX="30.0" layoutY="111.0" prefHeight="200.0" prefWidth="938.0">
+        <columns>
+          <TableColumn fx:id="photo" prefWidth="130.0" text="Photo" />
+          <TableColumn fx:id="titre" prefWidth="194.0" text="Titre" />
+            <TableColumn fx:id="description" prefWidth="469.0" text="Description" />
+            <TableColumn fx:id="prix" prefWidth="144.0" text="Prix" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

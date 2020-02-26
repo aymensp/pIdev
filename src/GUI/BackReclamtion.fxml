@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="618.0" prefWidth="1009.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.BackReclamtionController">
+   <children>
+      <Text layoutX="343.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTION DES RECLAMATIONS" wrappingWidth="232.837890625">
+         <font>
+            <Font size="15.0" />
+         </font></Text>
+      <TableView fx:id="tableview" layoutX="116.0" layoutY="76.0" prefHeight="426.0" prefWidth="581.0">
+        <columns>
+          <TableColumn fx:id="ColId" minWidth="0.0" prefWidth="0.0" text="Id" />
+          <TableColumn fx:id="ColMail" prefWidth="150.0" text="Mail" />
+            <TableColumn fx:id="ColType" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="ColDescription" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="ColEtat" prefWidth="75.0" text="Etat" />
+        </columns>
+      </TableView>
+      <Button fx:id="ajouter" layoutX="20.0" layoutY="113.0" mnemonicParsing="false" onAction="#Change_to_Traite" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #00ff91;" text="déjà traité" />
+      <Button fx:id="retour" layoutX="7.0" layoutY="17.0" mnemonicParsing="false" onAction="#directAccueil" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #00ff91;" text="retour" />
+      <Line endX="102.0" layoutX="465.0" layoutY="41.0" startX="-128.0" />
+      <ImageView fx:id="re" fitHeight="20.0" fitWidth="20.0" layoutX="10.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/27-512.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="ajouter1" layoutX="20.0" layoutY="163.0" mnemonicParsing="false" onAction="#Change_to_Non_Traite" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #00ff91;" text="non traité" />
+      <Button fx:id="ajouter11" layoutX="590.0" layoutY="545.0" mnemonicParsing="false" onAction="#Refrech" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #00ff91;" text="Actualiser" />
+      <Button fx:id="ajouter111" layoutX="148.0" layoutY="545.0" mnemonicParsing="false" onAction="#deleteUtilisateur" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #00ff91;" text="Supprimer" />
+   </children>
+</AnchorPane>

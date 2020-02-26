@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="bloquer" prefHeight="506.0" prefWidth="943.0" style="-fx-border-color: NAVY;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.UtilisateurController">
+   <children>
+      <Button fx:id="retour" layoutX="846.0" layoutY="29.0" mnemonicParsing="false" onAction="#directAccueil" prefHeight="20.0" prefWidth="79.0" style="-fx-background-color: #00ff91;" text="Retour" />
+      <Button fx:id="vider" layoutX="47.0" layoutY="461.0" mnemonicParsing="false" onAction="#vider" style="-fx-background-color: #00ff91;" text="Vider" />
+      <TextField fx:id="recherche" layoutX="602.0" layoutY="29.0" onAction="#recher" promptText="Barre de recherche" />
+      <Label layoutX="485.0" layoutY="34.0" text="Rechercher :" />
+      <TableView fx:id="table" layoutX="344.0" layoutY="64.0" prefHeight="400.0" prefWidth="587.0" style="-fx-border-color: NAVY;">
+         <columns>
+            <TableColumn fx:id="clNom" prefWidth="75.0" text="Nom" />
+            <TableColumn fx:id="clPrenom" prefWidth="75.0" text="Prenom" />
+            <TableColumn fx:id="clEmail" prefWidth="87.0" text="Email" />
+            <TableColumn fx:id="clAge" prefWidth="99.0" text="Age" />
+            <TableColumn fx:id="clNumT" prefWidth="96.0" text="Numero Tel" />
+            <TableColumn fx:id="clRole" prefWidth="75.0" text="Role" />
+            <TableColumn fx:id="clbloquer" prefWidth="75.0" text="bloquer" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="12.0" layoutY="9.0" prefHeight="454.0" prefWidth="344.0">
+         <children>
+            <TextField fx:id="txtnom" layoutX="142.0" layoutY="88.0" promptText="Nom" />
+            <TextField fx:id="txtprenom" layoutX="142.0" layoutY="134.0" promptText="Prenom" />
+            <Text fx:id="nomm" layoutX="16.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :" />
+            <Text fx:id="prenom" layoutX="17.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom :" />
+            <Text fx:id="age" layoutX="18.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age : " />
+            <Text layoutX="15.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero Tel:" />
+            <TextField fx:id="txtage" layoutX="142.0" layoutY="178.0" promptText="Age" />
+            <TextField fx:id="txtemail" layoutX="142.0" layoutY="235.0" promptText="Email" />
+            <TextField fx:id="txtnumTel" layoutX="142.0" layoutY="292.0" promptText="Numero Tel" />
+            <Text layoutX="15.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier Utilisateur">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Separator layoutY="51.0" prefHeight="4.0" prefWidth="344.0" style="-fx-background-color: NAVY;" />
+            <Text layoutX="16.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" />
+            <Text layoutX="18.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role :" />
+            <TextField fx:id="txtrole" layoutX="142.0" layoutY="350.0" promptText="Role" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btn" layoutX="148.0" layoutY="461.0" mnemonicParsing="false" onAction="#validerModif" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #00ff91;" text="Modifier" />
+      <Button fx:id="supprimer" layoutX="270.0" layoutY="460.0" mnemonicParsing="false" onAction="#validersupp" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #00ff91;" text="Supprimer" />
+      <ImageView fx:id="imgv" fitHeight="124.0" fitWidth="138.0" layoutX="338.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="148.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/edit-not-validated-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="311.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/empty_recycle_bin_by_brightknight.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="905.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/arrow-back-512.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="bloc" layoutX="476.0" layoutY="472.0" mnemonicParsing="false" onAction="#validerBloc" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #00ff91;" text="bloquer" />
+      
+   </children>
+</AnchorPane>

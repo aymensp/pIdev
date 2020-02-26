@@ -1,0 +1,19 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+-fx-background-image: url('file:C:/Users/aymen/Desktop/Tunfugees/src/Image/background_commande2.jpg');
+     -fx-background-size: 100% 100%;  
+}
+
+.button 
+{
+    -fx-background-color: #03B8DC;
+    
+}
+.tab1 
+{
+    -fx-background-color: #03B8DC;
+    
+}

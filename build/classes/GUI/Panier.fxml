@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.PanierController">
+    <stylesheets>
+        <URL value="@panier.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Votre Panier" textFill="#05da6c">
+         <font>
+            <Font name="BebasNeue" size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableview_panier" layoutX="8.0" layoutY="56.0" prefHeight="200.0" prefWidth="563.0">
+        <columns>
+          <TableColumn fx:id="photo" prefWidth="75.0" text="Photo" />
+          <TableColumn fx:id="titre" prefWidth="116.0" text="Titre" />
+            <TableColumn fx:id="description" prefWidth="286.0" text="Nom Refugies" />
+            <TableColumn fx:id="prix" prefWidth="85.0" text="Prix" />
+        </columns>
+      </TableView>
+      <Button fx:id="supprimer" layoutX="459.0" layoutY="270.0" mnemonicParsing="false" onAction="#Supprimer_AnnonceP" prefHeight="25.0" prefWidth="122.0" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="vider" layoutX="459.0" layoutY="303.0" mnemonicParsing="false" onAction="#ViderPanier" prefHeight="25.0" prefWidth="122.0" text="Vider Panier" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font></Button>
+      <Button fx:id="ajouter_commande" layoutX="459.0" layoutY="335.0" mnemonicParsing="false" onAction="#ajout_cmd" prefHeight="25.0" prefWidth="122.0" text="Passer Commande" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label layoutX="22.0" layoutY="275.0" prefHeight="24.0" prefWidth="122.0" text="Prix Total:" textFill="WHITE">
+         <font>
+            <Font name="Caviar Dreams" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="prix_total" layoutX="116.0" layoutY="277.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="Caviar Dreams" size="17.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="affichage_panier" fitHeight="38.0" fitWidth="51.0" layoutX="508.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../res/panier2.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="nb_article" layoutX="547.0" layoutY="21.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

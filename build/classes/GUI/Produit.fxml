@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane hbarPolicy="NEVER" prefHeight="576.0" prefWidth="565.0" style="-fx-border-radius: 20; -fx-background-color: #F0F1F7;" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ProduitController">
+   <padding>
+      <Insets left="30.0" />
+   </padding>
+   <content>
+      <VBox prefHeight="66.0" prefWidth="1134.0" style="-fx-background-color: #F0F1F7;">
+         <children>
+            <Separator prefWidth="200.0">
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </Separator>
+            <Label prefHeight="39.0" prefWidth="219.0" text="Tout les Annonces">
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="10.0" layoutY="110.0" prefWidth="200.0">
+               <opaqueInsets>
+                  <Insets bottom="10.0" />
+               </opaqueInsets>
+            </Separator>
+            <FlowPane fx:id="flow" alignment="CENTER_LEFT" hgap="20.0" prefWrapLength="1700.0" style="-fx-border-radius: 20; -fx-background-color: #F0F1F7;" vgap="10.0">
+               <padding>
+                  <Insets left="10.0" top="20.0" />
+               </padding>
+            </FlowPane>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

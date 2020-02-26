@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="471.0" prefWidth="735.0" style="-fx-border-color: #F08080;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.GStockController">
+    <stylesheets>
+        <URL value="@volontaires.css" />
+    </stylesheets>
+   <children>
+      <Button fx:id="retour" layoutX="620.0" layoutY="24.0" mnemonicParsing="false" onAction="#directAccueil" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #00ff91;" text="Retour" />
+      <Text layoutX="370.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion Stock :">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <TableView fx:id="tableview" layoutX="171.0" layoutY="72.0" prefHeight="368.0" prefWidth="516.0" style="-fx-border-color: #00ff91;">
+        <columns>
+          <TableColumn fx:id="ColId" prefWidth="75.0" text="" />
+          <TableColumn fx:id="ColType" prefWidth="75.0" text="Type" />
+                      <TableColumn fx:id="ColNom" prefWidth="75.0" text="NomProduit" />
+  
+          <TableColumn fx:id="ColQuantite" prefWidth="75.0" text="Quantite" />
+
+           
+        </columns>
+      </TableView>
+      <Button layoutX="14.0" layoutY="309.0" mnemonicParsing="false" onAction="#Change" prefHeight="25.0" prefWidth="143.0" style="-fx-background-color: #00ff91;" text="Modifier Quantite" />
+      <Button fx:id="supprimer" layoutX="18.0" layoutY="428.0" mnemonicParsing="false" onAction="#deleteUtilisateur" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #00ff91;" text="Supprimer" />
+      <TextField fx:id="Nom" layoutX="11.0" layoutY="356.0" />
+      <Separator layoutX="355.0" layoutY="46.0" prefWidth="200.0" style="-fx-background-color: #00ff91;" />
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="19.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/edit-not-validated-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="29.0" layoutY="431.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/empty_recycle_bin_by_brightknight.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="620.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/arrow-back-512.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="retour1" layoutX="32.0" layoutY="79.0" mnemonicParsing="false" onAction="#Refrech" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #00ff91;" text="Actualiser" />
+      <Button fx:id="ajout" layoutX="14.0" layoutY="195.0" mnemonicParsing="false" onAction="#directAjoutStock" prefHeight="25.0" prefWidth="143.0" style="-fx-background-color: #00ff91;" text="Ajouter Stock" />
+   </children>
+</AnchorPane>

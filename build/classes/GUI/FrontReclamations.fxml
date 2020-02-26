@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="618.0" prefWidth="1009.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FrontReclamationController">
+   <children>
+      <Text layoutX="564.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MES RECLAMATIONS" wrappingWidth="232.837890625">
+         <font>
+            <Font size="15.0" />
+         </font></Text>
+      <TableView fx:id="tableview" layoutX="334.0" layoutY="89.0" prefHeight="448.0" prefWidth="662.0">
+        <columns>
+          <TableColumn fx:id="ColId" minWidth="0.0" prefWidth="0.0" />
+          <TableColumn fx:id="ColMail" prefWidth="150.0" text="Mail" />
+            <TableColumn fx:id="ColType" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="ColDescription" prefWidth="206.0" text="Description" />
+            <TableColumn fx:id="ColEtat" minWidth="0.0" prefWidth="52.0" text="Etat" />
+        </columns>
+      </TableView>
+      <Button fx:id="ajouter" layoutX="13.0" layoutY="235.0" mnemonicParsing="false" onAction="#Change_to_Traite" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: #00ff91;" text="Modifier Description" />
+      <Button fx:id="retour" layoutX="7.0" layoutY="17.0" mnemonicParsing="false" onAction="#directAccueil" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #00ff91;" text="retour" />
+      <Line endX="102.0" layoutX="647.0" layoutY="43.0" startX="-128.0" />
+      <ImageView fx:id="re" fitHeight="20.0" fitWidth="20.0" layoutX="10.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/27-512.png" />
+         </image>
+      </ImageView>
+            <ChoiceBox fx:id="comboType" layoutX="176.0" layoutY="108.0" prefWidth="150.0" />
+      <Button fx:id="ajouter1" layoutX="14.0" layoutY="108.0" mnemonicParsing="false" onAction="#Change_to_Non_Traite" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: #00ff91;" text="Modifier Type" />
+      <Button fx:id="ajouter11" layoutX="744.0" layoutY="545.0" mnemonicParsing="false" onAction="#Refrech" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: #00ff91;" text="Actualiser" />
+      <Button fx:id="ajouter111" layoutX="352.0" layoutY="545.0" mnemonicParsing="false" onAction="#deleteUtilisateur" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: #00ff91;" text="Supprimer" />
+      <TextField fx:id="nom" layoutX="163.0" layoutY="215.0" prefHeight="90.0" prefWidth="167.0" />
+      <Text layoutX="829.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 : Reclamation non traité" />
+      <Text layoutX="830.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 :Reclamation déja traité" />
+   </children>
+</AnchorPane>

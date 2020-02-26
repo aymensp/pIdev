@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="1000.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="GUI.ImageshowAnnController">
+    <stylesheets>
+        <URL value="@imageshowann.css" />
+    </stylesheets>
+   <children>
+      <ImageView fx:id="imd_an" fitHeight="848.0" fitWidth="830.0" layoutX="85.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

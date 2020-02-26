@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="760.0" prefWidth="1360.0" style="-fx-border-color: #F08080;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjoutereventController">
+   <children>
+      <TextField fx:id="recherche" layoutX="914.0" layoutY="113.0" onAction="#recher" prefHeight="25.0" prefWidth="179.0" promptText="Barre de recherche" />
+      <Label layoutX="771.0" layoutY="118.0" text="Rechercher par :" />
+      <TableView fx:id="table" layoutX="625.0" layoutY="176.0" prefHeight="471.0" prefWidth="619.0" style="-fx-border-color: NAVY;">
+         <columns>
+            <TableColumn fx:id="no" prefWidth="103.0" text="Nom Event" />
+            <TableColumn fx:id="ad" prefWidth="93.0" text="Adresse" />
+            <TableColumn fx:id="da" prefWidth="85.0" text="Date" />
+            <TableColumn fx:id="dec" prefWidth="103.0" text="Decription" />
+            <TableColumn fx:id="nbr" prefWidth="102.0" text="Nombre Max" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="12.0" layoutY="9.0" prefHeight="734.0" prefWidth="472.0">
+         <children>
+            <TextField fx:id="nom" layoutX="189.0" layoutY="82.0" promptText="Nom de l'évenement" />
+            <TextField fx:id="adresse" layoutX="189.0" layoutY="160.0" promptText="Adresse" />
+            <Text fx:id="nomm" layoutX="17.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :" />
+            <Text fx:id="adressee" layoutX="15.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse :" />
+            <DatePicker fx:id="date" layoutX="189.0" layoutY="227.0" promptText="Date" />
+            <Text fx:id="datee" layoutX="18.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date :" />
+            <Text fx:id="descriptionn" layoutX="15.0" layoutY="473.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description :" />
+            <TextArea fx:id="description" layoutX="145.0" layoutY="452.0" prefHeight="116.0" prefWidth="186.0" promptText="Description" />
+            <Text layoutX="15.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombres" />
+            <TextField fx:id="nbrr" layoutX="187.0" layoutY="298.0" promptText="Nombres" />
+            <Button layoutX="164.0" layoutY="378.0" mnemonicParsing="false" onAction="#importer" prefHeight="32.0" prefWidth="138.0" style="-fx-background-color: #00ff91;" text="Importer" />
+            <Text layoutX="15.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter Evénement:">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Separator layoutY="51.0" prefHeight="0.0" prefWidth="584.0" style="-fx-background-color: NAVY;" />
+            <ImageView fx:id="imgv" fitHeight="158.0" fitWidth="216.0" layoutX="363.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="vider" layoutX="154.0" layoutY="676.0" mnemonicParsing="false" onAction="#vider" style="-fx-background-color: #00ff91;" text="Vider" />
+      <Button fx:id="ajouter" layoutX="61.0" layoutY="677.0" mnemonicParsing="false" onAction="#insertdata" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #00ff91;" text="Ajouter" />
+      <Button fx:id="btn" layoutX="220.0" layoutY="677.0" mnemonicParsing="false" onAction="#validerModif" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #00ff91;" text="Modifier" />
+      <Button fx:id="supprimer" layoutX="325.0" layoutY="677.0" mnemonicParsing="false" onAction="#validersupp" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #00ff91;" text="Supprimer" />
+      <Button fx:id="retour" layoutX="1178.0" layoutY="42.0" mnemonicParsing="false" onAction="#directAccueil" prefHeight="39.0" prefWidth="117.0" style="-fx-background-color: #00ff91;" text="Retour" />
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="61.0" layoutY="680.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/Male-user-add-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="220.0" layoutY="680.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/edit-not-validated-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="331.0" layoutY="680.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/empty_recycle_bin_by_brightknight.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="1178.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/arrow-back-512.png" />
+         </image>
+      </ImageView>
+      
+   </children>
+</AnchorPane>
